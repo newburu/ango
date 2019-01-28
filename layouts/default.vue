@@ -3,6 +3,7 @@
     <my-header />
     <nuxt />
     <my-footer />
+    <adsbygoogle v-bind:ad-slot="'4602373035'" />
   </div>
 </template>
 
