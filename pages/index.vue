@@ -153,7 +153,7 @@ export default {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
-  font-size: 64px;
+  font-size: 56px;
   color: #35495e;
   letter-spacing: 1px;
 }
