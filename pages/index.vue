@@ -161,7 +161,7 @@ export default {
 .subtitle {
   min-height: 10vh;
   font-weight: 300;
-  font-size: 34px;
+  font-size: 32px;
   color: #526488;
   word-spacing: 5px;
   padding-bottom: 15px;
