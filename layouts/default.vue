@@ -13,7 +13,7 @@ import MyFooter from '~/components/Footer.vue'
 export default {
   components: {
     MyHeader,
-    MyFooter
+    MyFooter,
   }
 }
 </script>
