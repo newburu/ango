@@ -2,6 +2,9 @@
   <section class="container">
     <div>
       <div class="row">
+        <br/>
+      </div>
+      <div class="row">
         <div class="col-sm-12">
           <h1 class="title">
             暗号メーカー<br/>〜ango!〜
@@ -22,11 +25,11 @@
             単純にシャッフルするだけです。<br/>
             ※まずはここから
           </h4>
-          <textarea id="from-string" class="form-control" placeholder="暗号前の文字列" v-model="fromString" v-on:keyup="changeFromString" v-on:change="changeFromString"/>
+          <textarea id="from-string" class="form-control" rows="3" placeholder="暗号前の文字列" v-model="fromString" v-on:keyup="changeFromString" v-on:change="changeFromString"/>
           <br/>
           ⬇暗号化⬇<br/>
           <br/>
-          <textarea id="to-string" class="form-control" placeholder="暗号後の文字列" v-model="toString" />
+          <textarea id="to-string" class="form-control" rows="10" placeholder="暗号後の文字列" v-model="toString" />
         </div>
       </div>
       <div class="row">
@@ -36,6 +39,9 @@
             ツイート
           </a>
         </div>
+      </div>
+      <div class="row">
+        <br/>
       </div>
     </div>
   </section>
@@ -60,8 +66,50 @@ export default {
   methods: {
 
     changeFromString: function(){
-      this.toString = this.fromString;
+      var fromString = this.fromString.split(/\r\n|\r|\n/);
+      var toString = [];
+      var ret = '';
+      fromString.forEach(str => {
+        toString.push(this.ango(str));
+      });
+      var idx = 0;
+      toString.forEach(str => {
+        if(idx != 0){
+          ret += '\r\n';
+        }
+        ret += str;
+        idx++;
+      });
+      this.toString = ret;
       this.createSnsUrl();
+    },
+
+    ango: function(str){
+      var ret = '';
+      var strs = str.split('');
+      ret = this.angoShuffle(strs);
+      return ret;
+    },
+
+    /**
+     * シャッフル暗号
+     */
+    angoShuffle: function(array){
+      var i;
+      var ret = '';
+      for (i=0 ; i<array.length; i++){
+        var tmpA, tmpB, rnd;
+        rnd = Math.floor(Math.random() * array.length);
+        tmpA = array[i];
+        tmpB = array[rnd];
+        array[i] = tmpB;
+        array[rnd] = tmpA;
+      }
+      for (i=0 ; i<array.length; i++){
+        ret += array[i];
+      }
+
+      return ret;
     },
 
     /**
