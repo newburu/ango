@@ -1,0 +1,34 @@
+.btn-primary {
+  background: #5bffff;
+  border-color: #5bffff;
+  color: white;
+}
+
+.btn-primary:hover, .btn-primary:focus, 
+.btn-primary:active, .btn-primary:active:focus, .btn-primary:active:hover, .btn-primary:active.focus,
+.btn-primary.active, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary, 
+.open > .dropdown-toggle.btn-primary:hover,
+.open > .dropdown-toggle.btn-primary:focus, 
+.open > .dropdown-toggle.btn-primary.focus,
+.btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled.focus, .btn-primary[disabled].focus, fieldset[disabled] .btn-primary.focus {
+  background: #5bffff;
+  border-color: #00dede;
+  color: white;
+}
+
+.btn-primary.outline {
+  border: 3px solid #5bffff;
+  color: white;
+}
+
+.btn-primary:not([disabled]):not(.disabled):active, .btn-primary:not([disabled]):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #5bffff;
+  border-color: #00dede;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(47, 164, 231, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(47, 164, 231, 0.5);
+}

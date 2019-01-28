@@ -8,7 +8,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    title: '暗号メーカー 〜ango!〜',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -28,6 +28,8 @@ module.exports = {
   ** Global CSS
   */
   css: [
+    '@fortawesome/fontawesome-free/css/all.css',
+    '~/assets/css/bootstrap_and_overrides.css',
   ],
 
   /*
@@ -41,7 +43,7 @@ module.exports = {
   */
   modules: [,
     // Doc: https://bootstrap-vue.js.org/docs/
-    'bootstrap-vue/nuxt'
+    'bootstrap-vue/nuxt',
   ],
 
   /*
@@ -54,5 +56,5 @@ module.exports = {
     extend(config, ctx) {
       
     }
-  }
+  },
 }
