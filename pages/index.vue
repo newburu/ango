@@ -153,7 +153,7 @@ export default {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
-  font-size: 56px;
+  font-size: 52px;
   color: #35495e;
   letter-spacing: 1px;
 }
@@ -161,7 +161,7 @@ export default {
 .subtitle {
   min-height: 10vh;
   font-weight: 300;
-  font-size: 36px;
+  font-size: 34px;
   color: #526488;
   word-spacing: 5px;
   padding-bottom: 15px;
@@ -169,7 +169,7 @@ export default {
 
 .ango-title {
   font-weight: 300;
-  font-size: 36px;
+  font-size: 24px;
   word-spacing: 5px;
   padding-bottom: 15px;
   text-align: left;
